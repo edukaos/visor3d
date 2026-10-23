@@ -1,0 +1,21 @@
+[package]
+name = "visor3d"
+version = "1.0.1"
+description = "Visor de modelos 3D de Quirón"
+authors = ["Quirón"]
+edition = "2021"
+
+[lib]
+name = "visor3d_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

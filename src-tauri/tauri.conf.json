@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Visor 3D",
+  "version": "1.0.1",
+  "identifier": "com.quiron.visor3d",
+  "build": { "frontendDist": "../src" },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [{
+      "label": "main",
+      "title": "Visor 3D",
+      "width": 1100,
+      "height": 750,
+      "minWidth": 400,
+      "minHeight": 300,
+      "dragDropEnabled": false
+    }],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi"],
+    "icon": ["icons/icon.png", "icons/icon.ico"],
+    "shortDescription": "Visor de modelos STL, OBJ, GLB y 3MF",
+    "fileAssociations": [
+      { "ext": ["stl"], "name": "STL", "description": "Modelo 3D STL", "role": "Viewer" },
+      { "ext": ["obj"], "name": "OBJ", "description": "Modelo 3D OBJ", "role": "Viewer" },
+      { "ext": ["glb"], "name": "GLB", "description": "Modelo 3D GLB", "role": "Viewer" },
+      { "ext": ["3mf"], "name": "3MF", "description": "Modelo 3D 3MF", "role": "Viewer" }
+    ],
+    "windows": {
+      "webviewInstallMode": { "type": "downloadBootstrapper", "silent": true },
+      "nsis": { "installMode": "currentUser", "languages": ["Spanish", "English"], "displayLanguageSelector": true }
+    }
+  }
+}

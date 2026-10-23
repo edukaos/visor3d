@@ -1,0 +1,16 @@
+{
+  "name": "visor3d",
+  "version": "1.0.1",
+  "private": true,
+  "description": "Visor 3D de Quirón para Windows",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "check": "node scripts/check.cjs",
+    "test": "node --test tests/bridge.test.cjs"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
